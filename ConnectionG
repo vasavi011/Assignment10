@@ -1,0 +1,36 @@
+package Assignment10;
+import java.util.Scanner;
+public class ConnectionsG {
+    public static void main(String args[]) {
+    	//prompt the user to enter the array size
+        System.out.println("Enter array size:");
+        int temp=0; int G2Count=0; int G3Count=0; int G4Count=0;//initialize variable to zero
+        Scanner sc=new Scanner(System.in);//Create Scanner
+        int a=sc.nextInt();
+        int arr[]=new int[a];//converting integer a to array type
+        System.out.println("enter array elements:");
+        for(int i=0; i<arr.length; i++)
+        {
+        	//loop to take the array elements
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0; i<arr.length; i++)
+        //loop to check the connection type
+        {
+            temp=arr[i]/1000;        
+        if(temp==2){
+            G2Count++;
+         }
+        else if(temp==3){
+            G3Count++;
+        }
+        else if(temp==4){
+            G4Count++;
+        }
+        }
+        System.out.println("2G ConnectionCount:"+G2Count);
+        System.out.println("3G ConnectionCount:"+G3Count);
+        System.out.println("4G ConnectionCount:"+G4Count);
+        
+    }
+}
